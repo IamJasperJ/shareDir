@@ -63,10 +63,6 @@ func (t *Tracker) Stop(reason error) {
 	fmt.Println("Tracker connection closed gracefully.")
 }
 
-func (t *Tracker) GetPeers() []string {
-	return t.peer.GetAllClient()
-}
-
 func (t *Tracker) handleHeartBeat(conn net.Conn) {
 	defer conn.Close()
 
